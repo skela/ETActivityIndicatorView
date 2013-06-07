@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "ETActivityIndicatorView.h"
+#import "MetroActivityIndicatorView.h"
 
 @interface ViewController ()
 
@@ -16,28 +16,24 @@
 
 @implementation ViewController
 
-ETActivityIndicatorView * etActivity;
-
-UIActivityIndicatorView *activity;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     //standard UIActivityIndicatorView
-    activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width-110, 150, 20, 20)];
-    activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
-    [activity startAnimating];
-    [self.view addSubview:activity];
+    self.activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width-110, 150, 20, 20)];
+    self.activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+    [self.activity startAnimating];
+    [self.view addSubview:self.activity];
     
     //ETActivityIndicatorView
-    etActivity = [[ETActivityIndicatorView alloc] initWithFrame:CGRectMake(50, 150, 60, 60)];
+    self.etActivity = [[MetroActivityIndicatorView alloc] initWithFrame:CGRectMake(50, 150, 60, 60)];
     
     //you can set your custom color for ETActivityIndicatorView
     //etActivity.color = [UIColor blueColor];
     
-    [etActivity startAnimating];
-    [self.view addSubview:etActivity];
+    [self.etActivity startAnimating];
+    [self.view addSubview:self.etActivity];
     
     UIButton *startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [startButton setTitle:@"start" forState:UIControlStateNormal];
@@ -53,13 +49,13 @@ UIActivityIndicatorView *activity;
 }
 
 -(void)startAnimation{
-    [activity startAnimating];
-    [etActivity startAnimating];
+    [self.activity startAnimating];
+    [self.etActivity startAnimating];
 }
 
 -(void)stopAnimation{
-    [activity stopAnimating];
-    [etActivity stopAnimating];
+    [self.activity stopAnimating];
+    [self.etActivity stopAnimating];
 }
 
 - (void)didReceiveMemoryWarning

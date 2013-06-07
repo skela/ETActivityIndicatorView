@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class MetroActivityIndicatorView;
 @interface ViewController : UIViewController
+
+
+@property(nonatomic,retain) MetroActivityIndicatorView * etActivity;
+@property(nonatomic,retain) UIActivityIndicatorView *activity;
 
 @end

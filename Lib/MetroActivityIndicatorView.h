@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ETActivityIndicatorView : UIView
+@interface MetroActivityIndicatorView : UIView
 
 @property (nonatomic,retain) UIColor *color;
+
+- (id)initWithFrame:(CGRect)frame andColor:(UIColor*)theColor;
 
 -(void)startAnimating;
 
@@ -19,3 +21,5 @@
 -(BOOL)isAnimating;
 
 @end
+
+
