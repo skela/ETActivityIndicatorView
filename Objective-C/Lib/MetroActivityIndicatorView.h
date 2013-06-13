@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface MetroActivityIndicatorView : UIView
-
+{
+    BOOL isAnimating;
+    int circleNumber;
+    int maxCircleNumber;
+    float circleSize;
+    float radius;
+    UIColor *color;
+}
 @property (nonatomic,retain) UIColor *color;
 
 - (id)initWithFrame:(CGRect)frame andColor:(UIColor*)theColor;

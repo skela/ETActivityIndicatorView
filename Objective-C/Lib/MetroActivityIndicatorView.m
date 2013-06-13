@@ -14,23 +14,12 @@
 
 @synthesize color;
 
-BOOL isAnimating = NO;
-
-UIImageView *circleImage;
-
-int circleNumber;
-
-int maxCircleNumber = 5; //maximum number of circles
-
-float circleSize; //depends on frame.size
-
-float radius; //depends on frame.size
-
 #pragma mark - Life Cycle
 
 - (void)commonInit
 {
     isAnimating = NO;
+    maxCircleNumber = 5;    
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -57,6 +46,13 @@ float radius; //depends on frame.size
         [self commonInit];
     }
     return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    if (isAnimating)
+        [self startAnimatingTransaction];
 }
 
 #pragma mark - Animation
