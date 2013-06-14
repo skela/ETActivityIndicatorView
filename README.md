@@ -1,4 +1,4 @@
-ETActivityIndicatorView
+MetroActivityIndicatorView
 =======================
 
 WindowsPhone like activity indicator for iOS. Display it while loading or waiting something.
@@ -15,13 +15,13 @@ Requirements
 How to use
 =======================
 
-Include the `ETActivityIndicatorView.h`, `ETActivityIndicatorView.m`, `Circle.h` and `Circle.m` in your project.
+Include the `MetroActivityIndicatorView.h`, `MetroActivityIndicatorView.m`, in your project.
 
-To display  `ETActivityIndicatorView`, simply do it like basic `UIActivityIndicatorView`:
+To display  `MetroActivityIndicatorView`, simply do it like basic `UIActivityIndicatorView`:
 
-    ETActivityIndicatorView *etActivity = [[ETActivityIndicatorView alloc] initWithFrame:CGRectMake((10, 10, 60, 60)];
-    [etActivity startAnimating];
-    [self.view addSubview:etActivity];
+    MetroActivityIndicatorView *indicator = [[MetroActivityIndicatorView alloc] initWithFrame:CGRectMake((10, 10, 60, 60)];
+    [indicator startAnimating];
+    [self.view addSubview:indicator];
 
 Example project included.
 
