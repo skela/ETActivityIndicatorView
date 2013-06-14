@@ -55,6 +55,16 @@
         [self startAnimatingTransaction];
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    if (isAnimating)
+    {
+        [self stopAnimating];
+        [self startAnimating];
+    }
+}
+
 #pragma mark - Animation
 
 -(void)startAnimating
