@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Skelphone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../Lib/MetroActivityIndicatorView.cs">
     <Files>
       <File FileName="MetroActivityIndicatorView/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="MetroActivityIndicatorView/MainViewController.cs" Line="36" Column="1" />
-      <File FileName="../Lib/MetroActivityIndicatorView.cs" Line="104" Column="90" />
+      <File FileName="MetroActivityIndicatorView/MainViewController.cs" Line="37" Column="4" />
+      <File FileName="../Lib/MetroActivityIndicatorView.cs" Line="121" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

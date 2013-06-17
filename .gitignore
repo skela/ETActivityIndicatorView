@@ -16,3 +16,6 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+Monotouch/MetroActivityIndicatorView/MetroActivityIndicatorView/bin/
+Monotouch/MetroActivityIndicatorView/MetroActivityIndicatorView/obj/

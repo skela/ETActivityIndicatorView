@@ -1,6 +1,8 @@
 using System;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using System.Drawing;
+using MonoTouch.CoreGraphics;
 
 namespace MetroActivityIndicatorView
 {
@@ -11,25 +13,29 @@ namespace MetroActivityIndicatorView
 			// Custom initialization
 		}
 
+		MetroActivityIndicatorView indicator;
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
-			// Perform any additional setup after loading the view, typically from a nib.
+
+			RectangleF f = new RectangleF (0, 0, 100, 100);
+
+			indicator = new MetroActivityIndicatorView (f);
+			View.AddSubview (indicator);
 		}
 
-		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
+		public override void ViewWillLayoutSubviews()
 		{
-			// Return true for supported orientations
-			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
+			base.ViewWillLayoutSubviews ();
+			indicator.Center = View.Center;
 		}
 
-		public override void DidReceiveMemoryWarning ()
+		public override void ViewWillAppear(bool animated)
 		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning ();
-			
-			// Release any cached data, images, etc that aren't in use.
+			base.ViewWillAppear (animated);
+			indicator.StartAnimating ();
+			//CGPath p = CGPath.EllipseFromRect(new RectangleF(),CGAffineTransform.MakeIdentity());
 		}
 	}
 }
